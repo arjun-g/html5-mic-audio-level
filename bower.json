@@ -1,0 +1,27 @@
+{
+  "name": "html5-mic-audio-level",
+  "main": "html5-mic-audio-level.js",
+  "homepage": "https://github.com/arjun-g/html5-mic-audio-level",
+  "description": "",
+  "keywords": [
+    "html5",
+    "webrtc",
+    "getusermedia",
+    "constraints",
+    "microphone",
+    "audio",
+    "audio",
+    "level"
+  ],
+  "authors": [
+    "Arjun G"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
