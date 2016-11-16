@@ -11,6 +11,9 @@
             video: false
         }
 
+        var currentStream = null
+        var audioContext = new AudioContext()
+
         navigator
         .mediaDevices
         .getUserMedia(constraints)
@@ -19,7 +22,8 @@
 
         function gotStream(stream){
 
-            var audioContext = new AudioContext()
+            currentStream = stream
+
             var analyser = audioContext.createAnalyser()
             var microphone = audioContext.createMediaStreamSource(stream)
             var javascriptNode = audioContext.createScriptProcessor(2048, 1, 1)
@@ -50,6 +54,17 @@
         function failedStream(err){
 
             callback(err, null)
+
+        }
+
+        this.dispose = this.destroy = function(){
+
+            if(currentStream){
+                currentStream.getTracks().forEach(track => {
+                    track.stop()
+                })
+            }
+            audioContext.close()
 
         }
 

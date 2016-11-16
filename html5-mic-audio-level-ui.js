@@ -46,6 +46,14 @@
             progressContainerDom.style.width = level + '%'
         })
 
+        this.dispose = this.destroy = function(){
+
+            micAudioLevel.dispose()
+
+            progressDom.remove()
+            progressContainerDom.remove()
+
+        }
         
     }
 
