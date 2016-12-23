@@ -2,7 +2,7 @@
 
     function MicAudioLevel(deviceId, callback){
 
-        var AudioContext = AudioContext || webkitAudioContext;
+        var AudioContext = AudioContext;
 
         var constraints = {
             audio: {
