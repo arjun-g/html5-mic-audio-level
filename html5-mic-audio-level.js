@@ -2,8 +2,6 @@
 
     function MicAudioLevel(deviceId, callback){
 
-        var AudioContext = AudioContext;
-
         var constraints = {
             audio: {
                 deviceId: deviceId ? { exact: deviceId } : undefined
