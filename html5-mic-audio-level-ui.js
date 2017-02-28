@@ -57,6 +57,6 @@
         
     }
 
-    window.MicAudioLevelUI = MicAudioLevelUI;
+    window.MicAudioLevelUI = MicAudioLevelUI
 
-})()
+})();

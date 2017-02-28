@@ -74,4 +74,4 @@
 
     window.MicAudioLevel = MicAudioLevel
 
-})()
+})();
